@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": " eslint **/*.tsx --fix",
     "storybook": "start-storybook -p 6006",
+    "storybook:build": "rimraf docs && cross-env STORYBOOK_BUILD=production build-storybook -c .storybook -s storybook-static -o docs",
+    "storybook:build-silent": "yarn storybook:build -- --loglevel error",
     "test": "jest --silent"
   },
   "dependencies": {
