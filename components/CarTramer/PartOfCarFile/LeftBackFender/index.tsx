@@ -5,7 +5,7 @@ export type Props = {
   style?: object;
   title: string;
 };
-const leftBackFender = (props: Props) => {
+const LeftBackFender = (props: Props) => {
   const { title, style, ...otherProps } = props;
   return (
     <Tooltip title={title}>
@@ -23,7 +23,7 @@ const leftBackFender = (props: Props) => {
     </Tooltip>
   );
 };
-leftBackFender.propTypes = {
+LeftBackFender.propTypes = {
   /**
    * Style of left Back Fender
    */
@@ -34,4 +34,4 @@ leftBackFender.propTypes = {
   title: PropTypes.string,
 
 };
-export default leftBackFender;
+export default LeftBackFender;
