@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import Tooltip from "@material-ui/core/Tooltip";
 import PropTypes from "prop-types";
 import {
   BackBonnet,
@@ -90,7 +89,7 @@ const CarTramer = (props: CarTramerProps) => {
     engineBonnet,
     leftFrondFender,
     frontBuffer,
-    backBuffer, 
+    backBuffer,
     rightBackFenderClick,
     backBonnetClick,
     leftBackFenderClick,
@@ -123,56 +122,8 @@ const CarTramer = (props: CarTramerProps) => {
     backBuffer,
   });
 
-  // useEffect(() => {
-  //   let data = { ...tramerColor };
-  //   Object.keys(dataTramer).forEach(function (key) {
-  //     switch (dataTramer[key]) {
-  //       case 0:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.orginal;
-  //           data[key].title = "Orjinal";
-  //         }
-  //         break;
-  //       case 1:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.painted;
-  //           data[key].title = "Boyalı";
-  //         }
-  //         break;
-  //       case 2:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.localPainted;
-  //           data[key].title = "Local Boyalı";
-  //         }
-  //         break;
-  //       case 3:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.changed;
-  //           data[key].title = "Değişen";
-  //         }
-  //         break;
-  //       case 4:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.undoAndAttach;
-  //           data[key].title = "Sök/Tak";
-  //         }
-  //         break;
-  //       case 5:
-  //         if (key !== "__v" && key !== "_id") {
-  //           data[key].color = color.meekAndScratch;
-  //           data[key].title = "Ezik/Çizik";
-  //         }
-  //         break;
-  //       default:
-  //     }
-  //   });
-  //   debugger
-  //   setTramerColor(data);
-  // }, [dataTramer]);
-
-
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root}  {...otherProps}>
       <div
         style={{
           display: "flex",
@@ -497,13 +448,13 @@ const CarTramer = (props: CarTramerProps) => {
                     <RightBackFender onClick={rightBackFenderClick} title={tramerColor.rightBackFender.title} style={getStyleObjectFromString(
                       tramerColor.rightBackFender.color
                     )} />
-                    <EngineBonnet onClick={engineBonnetClick}  title={tramerColor.engineBonnet.title} style={getStyleObjectFromString(
+                    <EngineBonnet onClick={engineBonnetClick} title={tramerColor.engineBonnet.title} style={getStyleObjectFromString(
                       tramerColor.engineBonnet.color
                     )} />
                     <BackBonnet onClick={backBonnetClick} title={tramerColor.backBonnet.title} style={getStyleObjectFromString(
                       tramerColor.backBonnet.color
                     )} />
-                    <Ceiling onClick={ceilingClick}  title={tramerColor.ceiling.title} style={getStyleObjectFromString(
+                    <Ceiling onClick={ceilingClick} title={tramerColor.ceiling.title} style={getStyleObjectFromString(
                       tramerColor.ceiling.color
                     )} />
                     <path
