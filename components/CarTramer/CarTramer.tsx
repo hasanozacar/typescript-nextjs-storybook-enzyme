@@ -459,7 +459,7 @@ const CarTramer = (props: CarTramerProps) => {
                       d="m328.49 199.3c-2.1085 1.6125-3.6146 4.1094-3.8656 7.0223l-0.60244 7.0223c-0.30122 3.6412 2.2591 6.8142 5.7734 7.1263s6.5766-2.3408 6.8778-5.982l0.90366-10.611c4.2171 1.7166 8.6851 2.6009 13.254 2.6009h17.822c3.6648 0 6.7272-3.017 6.928-6.8142 0.80325-17.738 1.2551-36.256 1.2551-55.502v-0.41614c0-19.402-0.45183-38.077-1.2551-55.918-0.15061-3.7973-3.213-6.8142-6.928-6.8142h-17.772c-4.5685 0-9.0366 0.88429-13.254 2.6009l-0.90366-10.611c-0.30122-3.6412-3.4138-6.2941-6.8778-5.982-3.5142 0.3121-6.0746 3.5372-5.7734 7.1263l0.60244 7.0223c0.25102 2.913 1.7069 5.4098 3.8656 7.0223v111.11h-0.050203z"
                       stroke="#D3D2D2"
                     ></path>
-                    <FrontBuffer onClick={leftBackFenderClick} title={tramerColor.frontBuffer.title} style={getStyleObjectFromString(
+                    <FrontBuffer onClick={frontBufferClick} title={tramerColor.frontBuffer.title} style={getStyleObjectFromString(
                       tramerColor.frontBuffer.color
                     )} />
 
@@ -503,10 +503,6 @@ const CarTramer = (props: CarTramerProps) => {
                     <BackBonnet onClick={backBonnetClick} title={tramerColor.backBonnet.title} style={getStyleObjectFromString(
                       tramerColor.backBonnet.color
                     )} />
-                    <LeftBackFender onClick={leftBackFenderClick}  title={tramerColor.leftBackFender.title} style={getStyleObjectFromString(
-                      tramerColor.leftBackFender.color
-                    )} />
-
                     <Ceiling onClick={ceilingClick}  title={tramerColor.ceiling.title} style={getStyleObjectFromString(
                       tramerColor.ceiling.color
                     )} />
