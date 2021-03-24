@@ -1,4 +1,3 @@
-import { observable, decorate } from 'mobx';
 
 export type Props = {
     titleOfPart: object;
@@ -20,8 +19,4 @@ class CarTramerStores {
         backBuffer:"backBuffer",
     };
 }
-
-decorate(CarTramerStores, {
-    titleOfPart: observable,
-});
 export default new CarTramerStores();
