@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/stores/*": ["stores/*"],
       "@/components/*": ["components/*"],
     },
     "target": "es5",

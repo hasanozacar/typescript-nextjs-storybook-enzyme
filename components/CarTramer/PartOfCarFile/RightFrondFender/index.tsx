@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Tooltip from '@material-ui/core/Tooltip';
+import TitleOfParts from "../../TitleOfParts";
 
 export type Props = {
-  style: object;
+  //Properties
+  style?: object;
   title: string;
+  //Events
+  onClick?: (event: MouseEvent, part: string) => void;
 };
 const RightFrondFender = (props: Props) => {
-  const { title, style, ...otherProps } = props;
-  return (
-    <Tooltip title={title}{...otherProps}>
+  const { title, onClick, style, ...otherProps } = props;
+  const handleClick = (event: any) => {
+    if (onClick) {
+      props.onClick(event, TitleOfParts.rightFrondFender);
+    }
+  }; return (
+    <Tooltip onClick={handleClick} title={title}{...otherProps}>
       <path
         transform="translate(267.88 261.26) scale(-1 1) rotate(180) translate(-267.88 -261.26)"
         d="m234.26 284.01l53.188-9.0296s15.014-4.4657 16.577-8.6861c1.563-4.2204 2.3681-7.0176 1.563-10.109-0.80516-3.0917-2.8418-10.502-2.8418-10.502s3.3154-6.1833-0.61572-6.1833c-3.9311 0-15.958-0.98148-15.958-0.98148s2.3211 32.474-25.531 32.907c-25.568 0.39668-24.904-28.637-24.904-28.637h-5.8815s5.7309 23.212 0 41.222h4.4042z"
@@ -34,6 +42,11 @@ RightFrondFender.propTypes = {
   * Title of Tooltip
   */
   title: PropTypes.string,
+  /**
+* onClik of Tooltip
+*/
+  onClick: PropTypes.func,
+
 
 };
 export default RightFrondFender;
