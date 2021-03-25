@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 const formatStringToCamelCase = (str: string) => {
-  const splitted = str.split("-");
+  const splitted = str && str.split("-");
   if (splitted.length === 1) return splitted[0];
   return (
     splitted[0] +
@@ -14,7 +14,7 @@ const formatStringToCamelCase = (str: string) => {
 
 export const getStyleObjectFromString = (str: string) => {
   const style = {};
-  str.split(";").forEach((el) => {
+  str && str.split(";").forEach((el) => {
     const [property, value] = el.split(":");
     if (!property) return undefined;
 

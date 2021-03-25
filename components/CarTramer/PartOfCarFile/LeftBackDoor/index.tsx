@@ -14,7 +14,6 @@ export type Props = {
 const LeftBackDoor = (props: Props) => {
   const { title, onClick, style, ...otherProps } = props;
   const handleClick = (event: any) => {
-    debugger
     if (onClick) {
       onClick(event, TitleOfParts.leftBackDoor);
     }

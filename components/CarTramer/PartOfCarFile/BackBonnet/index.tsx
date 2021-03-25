@@ -13,7 +13,6 @@ export type Props = {
 const BackBonnet = (props: Props) => {
   const { title, onClick, style, ...otherProps } = props;
   const handleClick = (event:any) => {
-    debugger
     if (onClick) {
       onClick(event, TitleOfParts.backBonnet);
     }
