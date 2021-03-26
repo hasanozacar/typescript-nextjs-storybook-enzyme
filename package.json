@@ -2,9 +2,6 @@
   "name": "react-helper-components",
   "version": "1.0.4",
   "private": false,
-  "engines": {
-    "node": "14.2.0"
-  },
   "scripts": {
     "dev": "yarn run storybook",
     "build": "next build",

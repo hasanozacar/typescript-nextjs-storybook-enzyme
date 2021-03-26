@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from "@material-ui/core/Tooltip";
 import TitleOfParts from "../../TitleOfParts";
-
 
 export type Props = {
   //Properties
-  style?: object;
-  title: string;
+  style?: object,
+  title: string,
   //Events
-  onClick?: (event: MouseEvent, part: string) => void;
+  onClick?: (event: MouseEvent, part: string) => void,
 };
 const LeftFrondFender = (props: Props) => {
   const { title, onClick, style, ...otherProps } = props;
@@ -41,12 +40,12 @@ LeftFrondFender.propTypes = {
    */
   style: PropTypes.object,
   /**
-  * Title of Tooltip
-  */
+   * Title of Tooltip
+   */
   title: PropTypes.string,
   /**
-* onClik of Tooltip
-*/
+   * onClik of Tooltip
+   */
   onClick: PropTypes.func,
 };
 export default LeftFrondFender;

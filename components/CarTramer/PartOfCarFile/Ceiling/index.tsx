@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from "@material-ui/core/Tooltip";
 import TitleOfParts from "../../TitleOfParts";
-
 
 export type Props = {
   //Properties
-  style: object;
-  title: string;
+  style: object,
+  title: string,
   //Events
-  onClick?: (event: MouseEvent, part: string) => void;
+  onClick?: (event: MouseEvent, part: string) => void,
 };
 const Ceiling = (props: Props) => {
   const { title, onClick, style, ...otherProps } = props;
@@ -19,7 +18,7 @@ const Ceiling = (props: Props) => {
     }
   };
   return (
-    <Tooltip onClick={handleClick}   title={title}{...otherProps}>
+    <Tooltip onClick={handleClick} title={title} {...otherProps}>
       <path
         d="m126.16 111s-10.794 28.349-1.1547 64.501h63.658s8.7855-32.771 0-64.501h-62.503z"
         fill="#E9E9E9"
@@ -40,12 +39,12 @@ Ceiling.propTypes = {
    */
   style: PropTypes.object,
   /**
-  * Title of Tooltip
-  */
+   * Title of Tooltip
+   */
   title: PropTypes.string,
   /**
-* onClik of Tooltip
-*/
+   * onClik of Tooltip
+   */
   onClick: PropTypes.func,
 };
 export default Ceiling;
